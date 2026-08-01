@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import LawIcon from "@primer/octicons-react/LawIcon";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   categories,
@@ -31,17 +33,6 @@ function licenseLabel(group: LicenseGroup) {
   if (group === "permissive") return "Permissive";
   if (group === "weak-copyleft") return "Weak copyleft";
   return "Strong copyleft";
-}
-
-function licenseMark(license: string) {
-  if (license.startsWith("Apache")) return { key: "apache", label: "A" };
-  if (license.startsWith("AGPL")) return { key: "agpl", label: "AG" };
-  if (license.startsWith("GPL")) return { key: "gpl", label: "G" };
-  if (license.startsWith("BSD")) return { key: "bsd", label: "B" };
-  if (license.startsWith("MPL")) return { key: "mpl", label: "M" };
-  if (license.startsWith("ISC")) return { key: "isc", label: "I" };
-  if (license.startsWith("PostgreSQL")) return { key: "postgresql", label: "P" };
-  return { key: "mit", label: "MIT" };
 }
 
 function formatStars(stars: number) {
@@ -161,7 +152,7 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
       <header className="site-header">
         <div className="header-inner">
           <a className="brand" href="#top" aria-label="OpenPlanTier home">
-            <span className="brand-mark">O</span>
+            <Image className="brand-logo" src="/openplantier-logo.png" alt="" width={32} height={32} unoptimized />
             <span>OpenPlanTier</span>
           </a>
           <nav className="nav-links" aria-label="Primary navigation">
@@ -180,7 +171,6 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
 
       <main id="top">
         <section className="hero">
-          <div className="eyebrow"><span className="status-dot" /> Open-source platform index</div>
           <h1>Build your own<br />operating platform.</h1>
           <p>
             Find, compare, and combine the open-source building blocks behind a
@@ -289,7 +279,6 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
               <div className="project-grid">
                 {filteredProjects.map((project) => {
                   const selected = selectedIds.includes(project.id);
-                  const mark = licenseMark(project.license);
                   return (
                     <article className={`project-card${selected ? " selected" : ""}`} key={project.id}>
                       <div className="project-card-top">
@@ -314,7 +303,7 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
                       </div>
                       <div className="project-card-footer">
                         <span className={`license-badge ${project.licenseGroup}`} title={licenseLabel(project.licenseGroup)}>
-                          <span className={`license-mark ${mark.key}`} aria-hidden="true">{mark.label}</span>
+                          <LawIcon className={`license-icon ${project.licenseGroup}`} size={16} aria-hidden="true" />
                           {project.license}
                         </span>
                         <span className="project-meta">
@@ -412,7 +401,10 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
 
       <footer>
         <div className="footer-inner">
-          <div className="brand"><span className="brand-mark">O</span><span>OpenPlanTier</span></div>
+          <div className="brand">
+            <Image className="brand-logo" src="/openplantier-logo.png" alt="" width={32} height={32} unoptimized />
+            <span>OpenPlanTier</span>
+          </div>
           <p>An independent open-source catalog. Not affiliated with Palantir Technologies.</p>
           <span>Catalog snapshot · 2026.08</span>
         </div>

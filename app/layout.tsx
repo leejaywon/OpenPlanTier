@@ -14,8 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "OpenPlanTier",
     description: "Open-source library archive and stack recommender.",
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: [{ url: "/openplantier-logo.png", type: "image/png", sizes: "512x512" }],
+      shortcut: "/openplantier-logo.png",
+      apple: [{ url: "/openplantier-logo.png", type: "image/png", sizes: "512x512" }],
     },
     openGraph: {
       type: "website",

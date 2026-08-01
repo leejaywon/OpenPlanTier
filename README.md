@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./exec-0393d2e5-64b6-47b0-965b-f6155cc1f180.png" alt="OpenPlanTier logo" width="220" />
+  <img src="./public/openplantier-overview.png" alt="OpenPlanTier overview: databases, maps, ontology, and AI connected to projects, stack builder, and operations" width="100%" />
 </p>
 
 <h1 align="center">OpenPlanTier</h1>
@@ -13,7 +13,7 @@
   <img alt="React 19" src="https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white" />
   <img alt="TypeScript 5.9" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img alt="Cloudflare Workers" src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
-  <img alt="License not specified" src="https://img.shields.io/badge/license-not%20specified-6B7280?style=flat-square" />
+  <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-6B7280?style=flat-square" />
 </p>
 
 ## Quick start
@@ -37,6 +37,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## License
 
-No license is currently declared for OpenPlanTier. Catalog entries retain their own licenses.
+OpenPlanTier is released under the [MIT License](./LICENSE). Catalog entries retain their own licenses.
 
 OpenPlanTier is independent and is not affiliated with Palantir Technologies.

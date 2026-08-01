@@ -38,10 +38,15 @@ test("server-renders the OpenPlanTier catalog", async () => {
   assert.match(html, /Ollama/);
   assert.match(html, /177k/);
   assert.match(html, /Download manifest/);
+  assert.match(html, /openplantier-logo\.png/);
+  assert.match(html, /class="brand-logo"/);
+  assert.doesNotMatch(html, /_vinext\/image/);
+  assert.doesNotMatch(html, /brand-mark/);
+  assert.doesNotMatch(html, /Open-source platform index/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
   assert.doesNotMatch(html, /Your composition/i);
-  assert.match(html, /license-mark mit/);
-  assert.match(html, /license-mark apache/);
+  assert.match(html, /octicon-law/);
+  assert.doesNotMatch(html, /license-mark/);
   assert.doesNotMatch(html, /project-monogram/);
   assert.doesNotMatch(html, /\/Users\/jerry\//);
 });

@@ -2,6 +2,7 @@
   "name": "openplantier",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "engines": {
     "node": ">=22.13.0"
   },
@@ -14,6 +15,7 @@
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
+    "@primer/octicons-react": "^19.32.0",
     "drizzle-orm": "0.45.2",
     "next": "^16.2.12",
     "react": "19.2.6",

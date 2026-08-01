@@ -113,17 +113,12 @@ select:focus-visible {
   letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  display: inline-grid;
-  width: 25px;
-  height: 25px;
-  place-items: center;
-  border-radius: 6px;
-  background: #000;
-  color: #fff;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 13px;
-  font-weight: 600;
+.brand-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -185,7 +180,6 @@ select:focus-visible {
   text-align: center;
 }
 
-.eyebrow,
 .section-kicker {
   color: var(--gray-500);
   font-family: var(--font-geist-mono), monospace;
@@ -195,26 +189,8 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 9px;
-  border: 1px solid var(--gray-200);
-  border-radius: 999px;
-  background: var(--gray-50);
-}
-
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #22a06b;
-  box-shadow: 0 0 0 3px rgb(34 160 107 / 11%);
-}
-
 .hero h1 {
-  margin: 27px 0 22px;
+  margin: 0 0 22px;
   font-size: clamp(54px, 7vw, 78px);
   font-weight: 600;
   letter-spacing: -0.072em;
@@ -718,59 +694,17 @@ select:focus-visible {
   font-family: var(--font-geist-mono), monospace;
 }
 
-.license-mark {
-  display: inline-grid;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  place-items: center;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-  font-family: var(--font-geist-sans), sans-serif;
-  font-size: 8px;
-  font-weight: 750;
-  letter-spacing: -0.04em;
-  line-height: 1;
+.license-icon {
+  flex: 0 0 auto;
+  color: #22a06b;
 }
 
-.license-mark.mit {
-  background: #fff0ef;
-  color: #c3312e;
+.license-icon.weak-copyleft {
+  color: var(--amber);
 }
 
-.license-mark.apache {
-  background: #f5f0ff;
-  color: #7048c8;
-}
-
-.license-mark.bsd {
-  background: #edf6ff;
-  color: #0969da;
-}
-
-.license-mark.gpl {
-  background: #fff1f0;
-  color: #b42318;
-}
-
-.license-mark.agpl {
-  background: #fff0f6;
-  color: #c11574;
-}
-
-.license-mark.mpl {
-  background: #fff4e8;
-  color: #d9480f;
-}
-
-.license-mark.isc {
-  background: #ecfeff;
-  color: #0e7490;
-}
-
-.license-mark.postgresql {
-  background: #eef5ff;
-  color: #336791;
+.license-icon.strong-copyleft {
+  color: var(--red);
 }
 
 .analogue-line {
