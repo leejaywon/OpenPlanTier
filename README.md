@@ -1,38 +1,42 @@
-# OpenPlanTier
+<p align="center">
+  <img src="./exec-0393d2e5-64b6-47b0-965b-f6155cc1f180.png" alt="OpenPlanTier logo" width="220" />
+</p>
 
-OpenPlanTier is a lightweight catalog and stack builder for open-source projects
-that can be combined into a Palantir-like platform.
+<h1 align="center">OpenPlanTier</h1>
 
-## Features
+<p align="center">
+  Discover, compare, and combine open-source building blocks for a Palantir-like operating platform.
+</p>
 
-- Search and filter projects by capability and license type.
-- Compare licenses, languages, and the closest Palantir platform role.
-- Start from Foundry-like, Gotham-like, AIP-like, and Apollo-like recipes.
-- Download the selected stack as JSON.
-- Download a shell script that clones every selected source repository.
-- Show verified GitHub popularity for additions that met the 5,000-star threshold.
+<p align="center">
+  <img alt="Next.js 16" src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+  <img alt="React 19" src="https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white" />
+  <img alt="TypeScript 5.9" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img alt="Cloudflare Workers" src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+  <img alt="License not specified" src="https://img.shields.io/badge/license-not%20specified-6B7280?style=flat-square" />
+</p>
 
-New catalog additions require at least 5,000 GitHub stars and an identifiable
-open-source community or core edition. Source-available-only projects are not
-added. Popularity is a discovery filter, not a quality or security guarantee.
+## Quick start
 
-The catalog is currently stored in `app/projects.ts`. The application has no
-database and sends no selection data to a server.
-
-## Local development
-
-Requires Node.js `>=22.13.0`.
+Requires Node.js 22.13 or newer.
 
 ```bash
+git clone https://github.com/leejaywon/OpenPlanTier.git
+cd OpenPlanTier
 npm install
 npm run dev
 ```
 
-Build and test:
+Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-npm run build
-npm test
-```
+## What it does
+
+- Search and filter curated open-source projects by capability and license.
+- Build a stack from individual projects or reference recipes.
+- Export a manifest or a source-download script.
+
+## License
+
+No license is currently declared for OpenPlanTier. Catalog entries retain their own licenses.
 
 OpenPlanTier is independent and is not affiliated with Palantir Technologies.
