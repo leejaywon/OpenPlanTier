@@ -44,12 +44,16 @@ license:
   source: https://github.com/duckdb/duckdb/blob/main/LICENSE
 languages:
   - C++
+github_stars: 38800
 status: active
 last_verified: 2026-08-01
 ```
 
 Every factual field should have an authoritative source and a verification
 date. License data must describe the exact edition or package being listed.
+New additions currently require at least 5,000 GitHub stars. Open-core entries
+must name the community or core edition and must not present enterprise code as
+open source.
 
 ## Recommendation input
 

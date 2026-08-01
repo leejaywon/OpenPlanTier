@@ -33,6 +33,11 @@ function licenseLabel(group: LicenseGroup) {
   return "Strong copyleft";
 }
 
+function formatStars(stars: number) {
+  const value = stars / 1000;
+  return `${value >= 100 ? Math.round(value) : value.toFixed(1)}k`;
+}
+
 export function CatalogApp() {
   const searchRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
@@ -107,6 +112,8 @@ export function CatalogApp() {
         licenseGroup: project.licenseGroup,
         repository: project.repository,
         analogue: project.analogue,
+        githubStars: project.githubStars,
+        starsVerifiedAt: project.starsVerifiedAt,
       })),
     };
     triggerDownload("openplantier-stack.json", `${JSON.stringify(manifest, null, 2)}\n`, "application/json");
@@ -298,7 +305,17 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
                         <span className={`license-badge ${project.licenseGroup}`} title={licenseLabel(project.licenseGroup)}>
                           <i aria-hidden="true" /> {project.license}
                         </span>
-                        <span>{project.language}</span>
+                        <span className="project-meta">
+                          <span>{project.language}</span>
+                          {project.githubStars && (
+                            <span
+                              className="star-count"
+                              title={`GitHub stars verified ${project.starsVerifiedAt}`}
+                            >
+                              ★ {formatStars(project.githubStars)}
+                            </span>
+                          )}
+                        </span>
                       </div>
                       <div className="analogue-line">
                         <span>Maps to</span>

@@ -34,6 +34,10 @@ test("server-renders the OpenPlanTier catalog", async () => {
   assert.match(html, /Stack builder/);
   assert.match(html, /PostgreSQL/);
   assert.match(html, /Cytoscape\.js/);
+  assert.match(html, /Valkey/);
+  assert.match(html, /Ollama/);
+  assert.match(html, /177k/);
   assert.match(html, /Download manifest/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+  assert.doesNotMatch(html, /\/Users\/jerry\//);
 });

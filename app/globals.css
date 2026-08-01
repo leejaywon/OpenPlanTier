@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
+  --font-geist-sans: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --gray-50: #fafafa;
   --gray-100: #f2f2f2;
   --gray-200: #eaeaea;
@@ -701,6 +703,18 @@ select:focus-visible {
   padding-top: 18px;
   color: var(--gray-500);
   font-size: 10px;
+}
+
+.project-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-count {
+  color: #171717;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 500;
 }
 
 .license-badge {
