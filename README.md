@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/openplantier-overview.png" alt="OpenPlanTier overview: databases, maps, ontology, and AI connected to projects, stack builder, and operations" width="100%" />
+  <img src="./ChatGPT%20Image%20Aug%201%2C%202026%2C%2004_07_03%20PM.png" alt="OpenPlanTier logo" width="220" />
 </p>
 
 <h1 align="center">OpenPlanTier</h1>
