@@ -714,23 +714,63 @@ select:focus-visible {
 .license-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-family: var(--font-geist-mono), monospace;
 }
 
-.license-badge i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #22a06b;
+.license-mark {
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
-.license-badge.weak-copyleft i {
-  background: var(--amber);
+.license-mark.mit {
+  background: #fff0ef;
+  color: #c3312e;
 }
 
-.license-badge.strong-copyleft i {
-  background: var(--red);
+.license-mark.apache {
+  background: #f5f0ff;
+  color: #7048c8;
+}
+
+.license-mark.bsd {
+  background: #edf6ff;
+  color: #0969da;
+}
+
+.license-mark.gpl {
+  background: #fff1f0;
+  color: #b42318;
+}
+
+.license-mark.agpl {
+  background: #fff0f6;
+  color: #c11574;
+}
+
+.license-mark.mpl {
+  background: #fff4e8;
+  color: #d9480f;
+}
+
+.license-mark.isc {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.license-mark.postgresql {
+  background: #eef5ff;
+  color: #336791;
 }
 
 .analogue-line {
@@ -775,6 +815,7 @@ select:focus-visible {
 }
 
 .stack-panel-header h2 {
+  margin: 0;
   font-size: 20px;
 }
 

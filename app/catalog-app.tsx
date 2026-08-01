@@ -33,6 +33,17 @@ function licenseLabel(group: LicenseGroup) {
   return "Strong copyleft";
 }
 
+function licenseMark(license: string) {
+  if (license.startsWith("Apache")) return { key: "apache", label: "A" };
+  if (license.startsWith("AGPL")) return { key: "agpl", label: "AG" };
+  if (license.startsWith("GPL")) return { key: "gpl", label: "G" };
+  if (license.startsWith("BSD")) return { key: "bsd", label: "B" };
+  if (license.startsWith("MPL")) return { key: "mpl", label: "M" };
+  if (license.startsWith("ISC")) return { key: "isc", label: "I" };
+  if (license.startsWith("PostgreSQL")) return { key: "postgresql", label: "P" };
+  return { key: "mit", label: "MIT" };
+}
+
 function formatStars(stars: number) {
   const value = stars / 1000;
   return `${value >= 100 ? Math.round(value) : value.toFixed(1)}k`;
@@ -278,6 +289,7 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
               <div className="project-grid">
                 {filteredProjects.map((project) => {
                   const selected = selectedIds.includes(project.id);
+                  const mark = licenseMark(project.license);
                   return (
                     <article className={`project-card${selected ? " selected" : ""}`} key={project.id}>
                       <div className="project-card-top">
@@ -302,7 +314,8 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
                       </div>
                       <div className="project-card-footer">
                         <span className={`license-badge ${project.licenseGroup}`} title={licenseLabel(project.licenseGroup)}>
-                          <i aria-hidden="true" /> {project.license}
+                          <span className={`license-mark ${mark.key}`} aria-hidden="true">{mark.label}</span>
+                          {project.license}
                         </span>
                         <span className="project-meta">
                           <span>{project.language}</span>
@@ -339,7 +352,6 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
             <aside className="stack-panel" aria-labelledby="stack-title">
               <div className="stack-panel-header">
                 <div>
-                  <span className="section-kicker">Your composition</span>
                   <h2 id="stack-title">Stack builder</h2>
                 </div>
                 {selectedProjects.length > 0 && <button className="text-button" onClick={() => setSelectedIds([])}>Clear</button>}
