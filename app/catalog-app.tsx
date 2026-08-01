@@ -281,7 +281,12 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
                   return (
                     <article className={`project-card${selected ? " selected" : ""}`} key={project.id}>
                       <div className="project-card-top">
-                        <div className="project-monogram" aria-hidden="true">{project.name.slice(0, 1)}</div>
+                        <div className="project-title-row">
+                          <h3>{project.name}</h3>
+                          <a href={project.repository} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} repository`}>
+                            ↗
+                          </a>
+                        </div>
                         <button
                           className="add-button"
                           onClick={() => toggleProject(project.id)}
@@ -290,12 +295,6 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
                         >
                           {selected ? "Added" : "+ Add"}
                         </button>
-                      </div>
-                      <div className="project-title-row">
-                        <h3>{project.name}</h3>
-                        <a href={project.repository} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} repository`}>
-                          ↗
-                        </a>
                       </div>
                       <p>{project.description}</p>
                       <div className="tag-list">
