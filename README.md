@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./ChatGPT%20Image%20Aug%201%2C%202026%2C%2004_07_03%20PM.png" alt="OpenPlanTier logo" width="220" />
+  <img src="./exec-0393d2e5-64b6-47b0-965b-f6155cc1f180.png" alt="OpenPlanTier overview" width="100%" />
 </p>
 
 <h1 align="center">OpenPlanTier</h1>
