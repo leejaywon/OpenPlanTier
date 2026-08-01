@@ -158,7 +158,7 @@ echo "Downloaded ${selectedProjects.length} projects to $(pwd)"
           <nav className="nav-links" aria-label="Primary navigation">
             <a href="#catalog">Catalog</a>
             <a href="#builder">Stack builder</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">
+            <a href="https://github.com/leejaywon/OpenPlanTier" target="_blank" rel="noreferrer">
               GitHub <span aria-hidden="true">↗</span>
             </a>
           </nav>
